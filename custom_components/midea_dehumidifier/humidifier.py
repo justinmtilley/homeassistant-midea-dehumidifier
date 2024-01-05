@@ -182,9 +182,9 @@ class MideaDehumidifierDevice(HumidifierEntity):
         self._upanddownSwing = None
         self._tankShow = False
 
-	#patch for HA2024.1.0
+        #patch for HA2024.1.0
         #self._device_class = DEVICE_CLASS_DEHUMIDIFIER
-	self._device_class = HumidifierDeviceClass.DEHUMIDIFIER
+        self._device_class = HumidifierDeviceClass.DEHUMIDIFIER
 
         ##Get appliance's status to set initial values for the device
         #_LOGGER.debug("midea-client: querying appliance status via Web API...")
@@ -277,7 +277,7 @@ class MideaDehumidifierDevice(HumidifierEntity):
     #patch for HA2024.1.0
     #def extra_state_attributes(self):	
     @property
-    def device_state_attributes(self):
+    def extra_state_attributes(self):
         """Return entity specific state attributes."""
         data = {}
 
